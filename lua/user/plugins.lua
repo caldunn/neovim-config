@@ -49,7 +49,7 @@ return lazy.setup({
 
 	"jose-elias-alvarez/null-ls.nvim",
 
-  -- disabled on nix until I discover why it is broken
+	-- disabled on nix until I discover why it is broken
 	"RRethy/vim-illuminate",
 
 	"nvim-telescope/telescope.nvim",
@@ -76,9 +76,9 @@ return lazy.setup({
 
 	"folke/which-key.nvim",
 
-  -- Mini icons for which-key
-  { 'nvim-mini/mini.nvim', version = false },
-  { 'nvim-mini/mini.icons', version = false },
+	-- Mini icons for which-key
+	{ "nvim-mini/mini.nvim", version = false },
+	{ "nvim-mini/mini.icons", version = false },
 
 	"MunifTanjim/prettier.nvim",
 

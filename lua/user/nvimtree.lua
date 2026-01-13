@@ -3,10 +3,9 @@ vim.g.loaded_netrwPlugin = 1
 
 local ok, tree = pcall(require, "nvim-tree")
 if not ok then
-  print("Nvim tree failed to load")
+	print("Nvim tree failed to load")
 	return
 end
-
 
 local function on_attach(bufnr)
 	local api = require("nvim-tree.api")

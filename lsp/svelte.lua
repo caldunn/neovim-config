@@ -1,16 +1,16 @@
 return {
-  cmd = { 'svelteserver', '--stdio' },
+	cmd = { "svelteserver", "--stdio" },
 
-  filetypes = { 'svelte' },
+	filetypes = { "svelte" },
 
-  root_markers = { { 'package.json' }, '.git' },
-  settings = {
-      svelte = {
-        plugin = {
-          svelte = { enabled = true },
-          typescript = { enabled = true }, -- Crucial for script tags
-          css = { enabled = true },
-        },
-      },
-  },
+	root_markers = { { "package.json" }, ".git" },
+	settings = {
+		svelte = {
+			plugin = {
+				svelte = { enabled = true },
+				typescript = { enabled = true }, -- Crucial for script tags
+				css = { enabled = true },
+			},
+		},
+	},
 }

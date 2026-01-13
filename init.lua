@@ -1,16 +1,16 @@
-require 'user/options'
-require 'user/keybinds'
-require 'user/plugins'
-require 'user/colorscheme'
-require 'user/cmp'
-require 'user/telescope'
-require 'user/treesitter'
-require 'user/lsp'
-require 'user/gitsigns'
-require 'user/autopairs'
-require 'user/nvimtree'
-require 'user/harpoon'
-require 'user/lualine'
-require 'user/which-key'
-require 'user/ufo'
+require("user/options")
+require("user/keybinds")
+require("user/plugins")
+require("user/colorscheme")
+require("user/cmp")
+require("user/telescope")
+require("user/treesitter")
+require("user/lsp")
+require("user/gitsigns")
+require("user/autopairs")
+require("user/nvimtree")
+require("user/harpoon")
+require("user/lualine")
+require("user/which-key")
+require("user/ufo")
 -- require ''

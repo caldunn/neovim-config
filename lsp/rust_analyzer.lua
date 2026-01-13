@@ -1,27 +1,27 @@
 return {
-  cmd = { 'rust-analyzer' },
+	cmd = { "rust-analyzer" },
 
-  filetypes = {'rs'},
+	filetypes = { "rs" },
 
-  root_markers = { { 'Cargo.toml' }, '.git' },
+	root_markers = { { "Cargo.toml" }, ".git" },
 
 	settings = {
-			imports = {
-				granularity = {
-					group = "module",
-				},
-				prefix = "self",
+		imports = {
+			granularity = {
+				group = "module",
 			},
-			cargo = {
-				buildScripts = {
-					enable = true,
-				},
-			},
-			procMacro = {
+			prefix = "self",
+		},
+		cargo = {
+			buildScripts = {
 				enable = true,
 			},
-      typing = {
-        continueCommentsOnNewline = false,
-      }
 		},
+		procMacro = {
+			enable = true,
+		},
+		typing = {
+			continueCommentsOnNewline = false,
+		},
+	},
 }
