@@ -1,6 +1,17 @@
+vim.opt.showcmdloc='statusline'
+
 local ok, lualine = pcall(require, "lualine")
 if not ok then
 	return
+end
+
+-- Function to get the current command being typed
+local function get_command()
+  local cmd = vim.fn.getcmdline()
+  if cmd ~= "" then
+    return ":" .. cmd
+  end
+  return ""
 end
 
 lualine.setup({
@@ -15,7 +26,7 @@ lualine.setup({
 		},
 		ignore_focus = {},
 		always_divide_middle = true,
-		globalstatus = false,
+		globalstatus = true,
 		refresh = {
 			statusline = 1000,
 			tabline = 1000,
@@ -25,7 +36,8 @@ lualine.setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff", "diagnostics" },
-		lualine_c = { "filename" },
+		-- lualine_c = { "filename" },
+    lualine_c = { get_command, type = 'watch' },
 		lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_y = { "progress" },
 		lualine_z = { "location" },
@@ -43,3 +55,4 @@ lualine.setup({
 	inactive_winbar = {},
 	extensions = {},
 })
+

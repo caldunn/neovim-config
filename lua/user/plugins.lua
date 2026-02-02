@@ -29,34 +29,26 @@ return lazy.setup({
 	-- LSP
 	{
 		"neovim/nvim-lspconfig",
+    lazy = false,
+    dependencies = {
+	    -- Completions
+      { "ms-jpq/coq_nvim", branch = "coq" },
+
+      -- 9000+ Snippets
+      { "ms-jpq/coq.artifacts", branch = "artifacts" },
+    },
+    init = function()
+      vim.g.coq_settings = {
+        auto_start = 'shut-up',
+      }
+    end,
 	},
-
-	-- Completions
-	{
-		"hrsh7th/nvim-cmp",
-		dependencies = {
-			"hrsh7th/cmp-buffer", -- buffer completions
-			"hrsh7th/cmp-path", -- path completions
-			"saadparwaiz1/cmp_luasnip", -- snippet completions
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-nvim-lua",
-		},
-	},
-
-	-- Snippets
-	"L3MON4D3/LuaSnip", --snippet engine
-	"rafamadriz/friendly-snippets", -- a bunch of snippets to
-
-	"jose-elias-alvarez/null-ls.nvim",
-
-	-- disabled on nix until I discover why it is broken
 	"RRethy/vim-illuminate",
 
 	"nvim-telescope/telescope.nvim",
 
 	-- ts
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	-- "p00f/nvim-ts-rainbow",
 
 	-- Autopairs closes braces
 	"windwp/nvim-autopairs",
@@ -73,6 +65,23 @@ return lazy.setup({
 
 	-- lualine
 	"nvim-lualine/lualine.nvim",
+
+  -- was causing so many issues
+  -- {
+  --   "folke/noice.nvim",
+  --   event = "VeryLazy",
+  --   opts = {
+  --     -- add any options here
+  --   },
+  --   dependencies = {
+  --     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+  --     "MunifTanjim/nui.nvim",
+  --     -- OPTIONAL:
+  --     --   `nvim-notify` is only needed, if you want to use the notification view.
+  --     --   If not available, we use `mini` as the fallback
+  --     "rcarriga/nvim-notify",
+  --     }
+  -- },
 
 	"folke/which-key.nvim",
 
